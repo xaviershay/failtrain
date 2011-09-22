@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
+
+require 'failtrain'
+train = if ARGV.length > 0
+  Failtrain.construct(ARGV)
+else
+  Failtrain.construct(ARGF.read.lines.map(&:chomp))
+end
+
+puts train

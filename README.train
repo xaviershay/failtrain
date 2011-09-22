@@ -1,0 +1,5 @@
+gem install failtrain
+failtrain choo choo
+cat lines.txt | failtrain
+fun for the whole family
+no specs lol
